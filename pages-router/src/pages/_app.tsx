@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 
-const disableNavbar = ["/auth/login", "/auth/register"];
+const disableNavbar = ["/auth/login", "/auth/register", "/404"];
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
