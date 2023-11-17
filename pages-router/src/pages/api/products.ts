@@ -1,5 +1,5 @@
-import { retrieveData } from "@/lib/firebase/service";
 import type { NextApiRequest, NextApiResponse } from "next";
+import knex from "@/lib/knex/connection";
 
 type Data = {
   code: number;
@@ -11,7 +11,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const data = await retrieveData("products");
+  
+  const data = await knex.select("*").from("products");
 
   res
     .status(200)
