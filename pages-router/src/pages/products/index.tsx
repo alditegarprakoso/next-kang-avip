@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import useSWR from "swr";
 
 import styles from "./Products.module.css";
 import { fetcher, formatRupiah } from "@/helper/helper";
 import SkeletonComponent from "@/components/elements/Skeleton";
+import Head from "next/head";
 
 type ProductType = {
   id: number;
@@ -40,13 +40,15 @@ function ProductPage() {
 
   return (
     <>
+    <Head>
+      <title>Product Page</title>
+    </Head>
       <div className={styles.container}>
         <h1>Product Page</h1>
         {!isLoading && data.data.length > 0 ? (
           <div className={styles.wrapCard}>
             {data.data.map((product: ProductType) => (
               <div key={product.id} className={styles.card}>
-                {/* <Image src={product.image} alt={product.name} width={200} height={200} /> */}
                 <img src={product.image} alt={product.name} />
                 <p className={styles.category}>{product.category}</p>
                 <p className={styles.name}>{product.name}</p>
