@@ -23,8 +23,15 @@
     width: 100%;
 }
 
+.category {
+    margin-bottom: 12px;
+    color: #6b7280;
+    margin-top: 12px;
+}
+
 .name {
     font-weight: bold;
+    margin: 12px 0px;
 }
 
 .price {
