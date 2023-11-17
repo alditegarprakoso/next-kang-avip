@@ -17,7 +17,7 @@ export default function StaticRendering({ products }: { products: Product[] }) {
             className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 px-4 mb-4"
           >
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <img src={product.image} alt={product.name} className="w-40" />
+              <img src={product.image} alt={product.title} className="w-40" />
               <p>{product.category}</p>
               <h2>{product.title}</h2>
               <p>{product.price}</p>
