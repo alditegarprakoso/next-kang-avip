@@ -1,4 +1,4 @@
-import { ProductType } from "./product.type";
+import { ProductType } from "../../types/product.type";
 
 export default function StaticRendering({ products }: { products: ProductType[]; }) {
   return (

@@ -1,4 +1,4 @@
-import { ProductType } from "@/pages/products/product.type";
+import { ProductType } from "@/types/product.type";
 
 // props products ini didapat dari return getServerSideProps
 

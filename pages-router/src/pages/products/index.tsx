@@ -6,7 +6,7 @@ import styles from "./Products.module.css";
 import { fetcher, formatRupiah } from "@/helper/helper";
 import SkeletonComponent from "@/components/elements/Skeleton";
 import Head from "next/head";
-import { ProductType } from "./product.type";
+import { ProductType } from "../../types/product.type";
 
 function ProductPage() {
   const router = useRouter();
